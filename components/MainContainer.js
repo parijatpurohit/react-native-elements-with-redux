@@ -8,7 +8,6 @@ import sample from '../redux/actions/sample';
 
 export class MainContainer extends React.Component {
   componentDidMount() {
-    console.log('mounted');
     const { dispatch } = this.props;
     console.log(sample());
     dispatch(sample());

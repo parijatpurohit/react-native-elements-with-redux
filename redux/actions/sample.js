@@ -1,13 +1,14 @@
+import { get } from '../../utils/fetchservice';
+
 export const SAMPLE_ACTIONS_TYPES = {
   SAMPLE: 'SAMPLE',
 };
 export default function sample() {
   return {
     type: 'SAMPLE',
-    payload: {
-      request: {
-        url: '/200',
-      },
+    api: {
+      client: get,
+      path: '/200',
     },
   };
 }

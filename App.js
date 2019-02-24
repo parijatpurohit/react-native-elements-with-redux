@@ -1,21 +1,15 @@
 import React from 'react';
-import axiosMiddleware from 'redux-axios-middleware';
 import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
-import axios from 'axios';
 import reducers from './redux/reducers/index';
-import Config from './config';
 import MainContainerConnect from './components/MainContainer';
+import fetchMiddleware from './redux/middlewares/fetchMiddleware';
 
 export default function App() {
-  const client = axios.create({
-    baseURL: Config.serverBaseURL,
-    responseType: 'json',
-  });
   const store = createStore(
     reducers,
     applyMiddleware(
-      axiosMiddleware(client),
+      fetchMiddleware,
     ),
   );
   return (
