@@ -6,7 +6,7 @@ const sample = (state = {}, action) => {
       return { ...state, action };
     }
     case 'SAMPLE_SUCCESS': {
-      console.log('i succeeded');
+      console.log('i succeeded', action.api);
       return { ...state, action };
     }
     case 'SAMPLE_FAIL': {

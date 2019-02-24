@@ -21,7 +21,6 @@ export class MainContainer extends React.Component {
           <Text>{I18n.t('mainText')}</Text>
           <Avatar
             onPress={() => console.log('pressed')}
-                //   onClick={() => }
             size="large"
             containerStyle={style.avatar}
             rounded

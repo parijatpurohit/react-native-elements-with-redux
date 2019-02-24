@@ -8,7 +8,7 @@ export default function sample() {
     type: 'SAMPLE',
     api: {
       client: get,
-      path: '/200',
+      path: '/sample',
     },
   };
 }
